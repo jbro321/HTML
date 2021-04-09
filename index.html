@@ -1,11 +1,156 @@
 <html lang="ko">
   <head>
+    <style type="text/css">
+      a {
+        text-decoration: none;
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <title>로그인</title>
   </head>
   <body>
-    test
+    <section class="login">
+      <h2>로그인</h2>
+      <ul>
+        <li>
+          <input type="text" placeholder="아이디" title="아이디입력" />
+        </li>
+        <li>
+          <input type="password" placeholder="비밀번호" title="비밀번호입력" />
+        </li>
+        <li>
+          <input type="checkbox" id="chk_id" , />
+          <label for="chk_id">아이디저장</label>
+        </li>
+        <li><button>로그인</button></li>
+      </ul>
+      <div>
+        <ul>
+          <li><a href="">회원가입</a></li>
+          <li><a href="">아이디 찾기</a></li>
+          <li><a href="">비밀번호 찾기</a></li>
+        </ul>
+      </div>
+      <a href="">비회원 주문조회</a>
+    </section>
   </body>
 </html>
+
+<style>
+  ul {
+    list-style: none;
+  }
+  .login {
+    width: 410px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .login h2 {
+    padding: 0 0 20px;
+    font-size: 32px;
+    color: #111;
+    border-bottom: 2px solid #111;
+    text-align: center;
+    line-height: 1;
+  }
+  .login > ul {
+    padding: 40px 0 33px;
+  }
+  .login > ul li {
+    padding: 0 0 12px;
+    text-align: left;
+  }
+  .login > ul li input {
+    width: 100%;
+    height: 46px;
+    box-sizing: border-box;
+    text-indent: 16px;
+  }
+  .login > ul li input::-webkit-input-placeholder {
+    font-size: 16px;
+    color: rgb(126, 122, 122);
+    text-indent: 16px;
+  }
+  .login > ul li input[type="checkbox"] {
+    position: absolute;
+    left: -3000%;
+  }
+  .login > ul li input[type="checkbox"] + label {
+    height: 36px;
+    line-height: 36px;
+  }
+  .login > ul li input[type="checkbox"] + label:before {
+    content: "";
+    display: inline-block;
+    margin: 0 10px 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #666;
+    background: #fff;
+    vertical-align: -5px;
+  }
+  .login > ul li input[type="checkbox"]:checked + label:before {
+    background: url(/images/ico_check_on.png) no-repeat #333;
+    border-color: #333;
+  }
+  .login button {
+    width: 100%;
+    height: 56px;
+    background: #ed1c24;
+    border: 1px solid #ed1c24;
+    font-size: 18px;
+    color: #fff;
+  }
+  .login div {
+    padding: 0 0 45px;
+  }
+  .login div ul {
+    display: flex;
+    justify-content: center;
+  }
+  .login div ul li {
+    position: relative;
+    padding: 0 18px;
+  }
+  .login div ul li ~ li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    height: 14px;
+    width: 1px;
+    background: #111;
+    transform: rotate(25deg);
+  }
+  .login div ul li a {
+    font-size: 10px;
+    color: #111;
+  }
+  .login > a {
+    padding: 0 0 2px;
+    font-size: 14px;
+    color: #666;
+    border-bottom: 1px solid #666;
+  }
+  /*.login > a {
+    position: relative;
+    font-size: 14px;
+    color: #666;
+  }
+  .login > a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #666;
+  }*/
+</style>
+
+<!-- https://www.youtube.com/watch?v=BQ8Qq1gx7wE -->
